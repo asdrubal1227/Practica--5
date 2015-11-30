@@ -10,9 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/drw2"
-        android:layout_margin="0dp"
         android:src="@drawable/cine1"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:adjustViewBounds="true" />
 
     <TextView android:layout_width="match_parent"
         android:layout_height="wrap_content"

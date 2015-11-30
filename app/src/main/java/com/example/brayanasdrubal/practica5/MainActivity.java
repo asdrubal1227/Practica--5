@@ -20,28 +20,27 @@ public class MainActivity extends AppCompatActivity {
     public static int num=0,idm=0,p=0;
 
     ListView lstNombres;
-    String titl,can;
+    static String titl,can, c;
     public String[] tit={"Cine","Teatro","Restaurante","Rumba","Turismo","Cinema", "Theatre", "Restaurant", "Rumba", "Tourism"};
 
-    private Lista_Entrada[] datos =
-            new Lista_Entrada[] {
-                    new Lista_Entrada(R.drawable.cine, "Cine", "3 Lugares","Cinema","3 Places"),
-                    new Lista_Entrada(R.drawable.teatro, "Teatro", "2 Lugares", "Theatre","2 Places"),
-                    new Lista_Entrada(R.drawable.rest, "Restaurante", "3 Lugares", "Restaurant","3 Places"),
-                    new Lista_Entrada(R.drawable.rumba,"Rumba","3 Lugares", "Rumba","3 Places"),
-                    new Lista_Entrada(R.drawable.turi,"Turismo","3 Lugares", "Tourism","3 Places")};
+    private Lista_Entrada[] datos ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        datos= new Lista_Entrada[]{
+                new Lista_Entrada(R.drawable.cine, getString(R.string.Cine), "3 "+getString(R.string.L),"Cinema","3 Places"),
+                new Lista_Entrada(R.drawable.teatro, getString(R.string.Teatro), "2 "+getString(R.string.L), "Theatre","2 Places"),
+                new Lista_Entrada(R.drawable.rest,getString(R.string.Restaurante), "3 "+getString(R.string.L), "Restaurant","3 Places"),
+                new Lista_Entrada(R.drawable.rumba,getString(R.string.Rumba),"3 "+getString(R.string.L), "Rumba","3 Places"),
+                new Lista_Entrada(R.drawable.turi,getString(R.string.Turismo),"3 "+getString(R.string.L), "Tourism","3 Places")};
 
         Adapter adaptador = new Adapter(this, datos);
 
         lstNombres = (ListView) findViewById(R.id.Lst);
 
         lstNombres.setAdapter(adaptador);
-
         lstNombres.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -144,25 +143,7 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.español) {
-            Toast.makeText(this, "Idioma Español", Toast.LENGTH_SHORT).show();
-            idm=0;
-            p = 0;
-            Intent i = new Intent(this, MainActivity.class);
-            startActivity(i);
-            finish();
-            return true;
-        }
 
-        if (id == R.id.ingles) {
-            Toast.makeText(this, "Idiom English", Toast.LENGTH_SHORT).show();
-            idm=1;
-            p=5;
-            Intent i = new Intent(this, MainActivity.class);
-            startActivity(i);
-            finish();
-            return true;
-        }
 
 
         if (id == R.id.acerca) {

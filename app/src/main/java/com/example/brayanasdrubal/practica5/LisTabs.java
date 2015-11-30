@@ -37,7 +37,7 @@ public class LisTabs extends AppCompatActivity {
         }
         if (MainActivity.idm ==1){
             p=5;
-            c1t=R.string.cine1ti;
+         /*   c1t=R.string.cine1ti;
             c2t=R.string.cine2ti;
             c3t=R.string.cine3ti;
             c1=R.string.cine1i;
@@ -64,7 +64,7 @@ public class LisTabs extends AppCompatActivity {
             tu3t=R.string.turis3ti;
             tu1=R.string.turis1i;
             tu2=R.string.turis2i;
-            tu3=R.string.turis3i;
+            tu3=R.string.turis3i;*/
         }else {
             p=0;
             c1t=R.string.cine1t;
@@ -120,7 +120,7 @@ public class LisTabs extends AppCompatActivity {
         TextView t3 = (TextView) findViewById(R.id.tit3);
         TextView tx3 = (TextView) findViewById(R.id.tex3);
         if(MainActivity.num ==0){
-            setTitle(tit[0+p]);
+            setTitle(getText(R.string.Cine));
             sit1.setImageResource(R.drawable.cine1);
             t1.setText(c1t);
             tx1.setText(c1);
@@ -131,7 +131,7 @@ public class LisTabs extends AppCompatActivity {
             t3.setText(c3t);
             tx3.setText(c3);
         }else if(MainActivity.num ==1){
-            setTitle(tit[1+p]);
+            setTitle(getText(R.string.Teatro));
             sit1.setImageResource(R.drawable.teatro1);
             t1.setText(t1t);
             tx1.setText(te1);
@@ -139,7 +139,7 @@ public class LisTabs extends AppCompatActivity {
             t2.setText(t2t);
             tx2.setText(te2);
         }else if(MainActivity.num ==2){
-            setTitle(tit[2+p]);
+            setTitle(getText(R.string.Restaurante));
             sit1.setImageResource(R.drawable.rest1);
             t1.setText(r1t);
             tx1.setText(r1);
@@ -150,7 +150,7 @@ public class LisTabs extends AppCompatActivity {
             t3.setText(r3t);
             tx3.setText(r3);
         }else if(MainActivity.num ==3){
-            setTitle(tit[3+p]);
+            setTitle(getText(R.string.Rumba));
             sit1.setImageResource(R.drawable.rumba1);
             t1.setText(ru1t);
             tx1.setText(ru1);
@@ -161,7 +161,7 @@ public class LisTabs extends AppCompatActivity {
             t3.setText(ru3t);
             tx3.setText(ru3);
         }else if(MainActivity.num ==4){
-            setTitle(tit[4+p]);
+            setTitle(getText(R.string.Turismo));
             sit1.setImageResource(R.drawable.turi1);
             t1.setText(tu1t);
             tx1.setText(tu1);

@@ -6,12 +6,4 @@
         android:id="@+id/acerca"
         app:showAsAction="never"
         android:title="@string/acerca"/>
-    <item
-        android:id="@+id/español"
-        app:showAsAction="never"
-        android:title="@string/spanish"/>
-    <item
-        android:id="@+id/ingles"
-        app:showAsAction="never"
-        android:title="@string/english"/>
 </menu>
