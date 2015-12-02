@@ -173,5 +173,6 @@ public class LisTabs extends AppCompatActivity {
             tx3.setText(tu3);
         }
 
+
     }
 }
